@@ -17,12 +17,12 @@ import "github.com/MGSousa/dKsync"
 
 func main() {
 	sync := dksync.CronSync {
-		Concurrency:    "allow",
-		DisableJob:     false,
-		Tags:           "{\"mytag\":\"true\"}",
-		Executor:       "shell",
+		Concurrency:        "allow",
+		DisableJob:         false,
+		Tags:               "{\"mytag\":\"true\"}",
+		Executor:           "shell",
 		Processor: 	    map[string]map[string]string{"plugin": {...}},
-		Retries:      	1,
+		Retries:      	    1,
 		DryRun: 	    true,
 	}
 	sync.JobsProcessor("/var/spool/cron/crontabs/root")
